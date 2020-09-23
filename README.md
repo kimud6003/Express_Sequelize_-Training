@@ -4,3 +4,4 @@
 2. sequelize
 3. dotenv
 4. nodemon
+5. mysql2
