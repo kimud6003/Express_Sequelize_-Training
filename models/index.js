@@ -33,5 +33,23 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+db.User = require('./User')(sequelize,Sequelize);
+db.VideoTable = require('./VideoTable')(sequelize,Sequelize);
+db.NoticeTable = require('./NoticeTable')(sequelize,Sequelize);
+db.VideoTable_Category = require('./VideoTable_Category')(sequelize,Sequelize);
+db.NoticeTable_Category = require('./NoticeTable_Category')(sequelize,Sequelize);
+// 외래키 추가
+db.User.hasMany(db.VideoTable,{foreignKey:"User_id",sourceKey:"id"});
+db.VideoTable.belongsTo(db.User,{foreignKey:"User_id",targetKey:"id"});
+
+db.User.hasMany(db.NoticeTable,{foreignKey:"User_id",sourceKey:"id"});
+db.NoticeTable.belongsTo(db.User,{foreignKey:"User_id",targetKey:"id"});
+
+db.NoticeTable_Category.hasMany(db.NoticeTable,{foreignKey:"User_id",sourceKey:"id"});
+db.NoticeTable.belongsTo(db.NoticeTable_Category,{foreignKey:"User_id",targetKey:"id"});
+
+db.VideoTable_Category.hasMany(db.VideoTable,{foreignKey:"User_id",sourceKey:"id"});
+db.VideoTable.belongsTo(db.VideoTable_Category,{foreignKey:"User_id",targetKey:"id"});
+
 
 module.exports = db;
