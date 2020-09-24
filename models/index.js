@@ -45,11 +45,11 @@ db.VideoTable.belongsTo(db.User,{foreignKey:"User_id",targetKey:"id"});
 db.User.hasMany(db.NoticeTable,{foreignKey:"User_id",sourceKey:"id"});
 db.NoticeTable.belongsTo(db.User,{foreignKey:"User_id",targetKey:"id"});
 
-db.NoticeTable_Category.hasMany(db.NoticeTable,{foreignKey:"User_id",sourceKey:"id"});
-db.NoticeTable.belongsTo(db.NoticeTable_Category,{foreignKey:"User_id",targetKey:"id"});
+db.NoticeTable_Category.hasMany(db.NoticeTable,{foreignKey:"Category_Id",sourceKey:"id"});
+db.NoticeTable.belongsTo(db.NoticeTable_Category,{foreignKey:"Category_Id",targetKey:"id"});
 
-db.VideoTable_Category.hasMany(db.VideoTable,{foreignKey:"User_id",sourceKey:"id"});
-db.VideoTable.belongsTo(db.VideoTable_Category,{foreignKey:"User_id",targetKey:"id"});
+db.VideoTable_Category.hasMany(db.VideoTable,{foreignKey:"Category_Id",sourceKey:"id"});
+db.VideoTable.belongsTo(db.VideoTable_Category,{foreignKey:"Category_Id",targetKey:"id"});
 // 외래키 끝
 
 module.exports = db;

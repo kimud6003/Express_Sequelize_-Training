@@ -22,7 +22,7 @@ module.exports = {
       },
       Content: {
         type: Sequelize.STRING,
-        allowNull:false
+        // allowNull:false
       },
       Date: {
         type: Sequelize.DATE,
@@ -30,15 +30,15 @@ module.exports = {
       },
       View_content: {
         type: Sequelize.INTEGER,
-        allowNull:false
+        // allowNull:false
       },
       Image: {
         type: Sequelize.STRING,
-        allowNull:false
+        // allowNull:false
       },
       Image_real: {
         type: Sequelize.STRING,
-        allowNull:false
+        // allowNull:false
       },
       Video_link: {
         type: Sequelize.STRING,

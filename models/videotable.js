@@ -36,18 +36,22 @@ module.exports = (sequelize, DataTypes) => {
     },
     View_content: {
       type:DataTypes.INTEGER,
-      allowNull:false
+      // allowNull:false
     },
     Image:{
       type:DataTypes.STRING,
-      allowNull:false
+      // allowNull:false
     },
     Image_real: {
       type:DataTypes.STRING,
-      allowNull:false
+      // allowNull:false
     },
     Video_link: {
       type:DataTypes.STRING,
+      allowNull:false
+    },
+    Access: {
+      type:DataTypes.INTEGER,
       allowNull:false
     }
 
