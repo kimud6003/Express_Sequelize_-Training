@@ -14,12 +14,30 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   NoticeTable.init({
-    Category_Id: DataTypes.INTEGER,
-    User_id: DataTypes.INTEGER,
-    Title: DataTypes.STRING,
-    Content: DataTypes.STRING,
-    Date: DataTypes.DATE,
-    View_count: DataTypes.INTEGER
+    Category_Id:{
+      type:DataTypes.INTEGER,
+      allowNull:false,
+    },
+    User_id:{
+      type:DataTypes.INTEGER,
+      allowNull:false
+    },
+    Title:{
+      type:DataTypes.STRING,
+      allowNull:false
+    },
+    Content:{
+      type:DataTypes.STRING,
+      allowNull:false
+    },
+    Date:{
+     type: DataTypes.DATE,
+     allowNull:false
+    },
+    View_count: {
+      type:DataTypes.INTEGER,
+      allowNull:false
+    }
   }, {
     sequelize,
     modelName: 'NoticeTable',

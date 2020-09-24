@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   NoticeTable_Category.init({
-    CategoryName: DataTypes.STRING
+    CategoryName: {
+      type:DataTypes.STRING,
+      allowNull:false
+    },
   }, {
     sequelize,
     modelName: 'NoticeTable_Category',

@@ -18,12 +18,11 @@ module.exports = {
       },
       UserPW: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       StudentNumber: {
-        type: Sequelize.INTEGER
-      },
-      Access: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,

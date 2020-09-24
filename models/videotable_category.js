@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   VideoTable_Category.init({
-    VideoName: DataTypes.STRING
+    VideoName: {
+      type:DataTypes.STRING,
+      allowNull:false
+    },
   }, {
     sequelize,
     modelName: 'VideoTable_Category',

@@ -14,15 +14,43 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   VideoTable.init({
-    Category_id: DataTypes.INTEGER,
-    User_id: DataTypes.INTEGER,
-    Title: DataTypes.STRING,
-    Content: DataTypes.STRING,
-    Date: DataTypes.DATE,
-    View_content: DataTypes.INTEGER,
-    Image: DataTypes.STRING,
-    Image_real: DataTypes.STRING,
-    Video_link: DataTypes.STRING
+    Category_id: {
+      type:DataTypes.INTEGER,
+      allowNull:false
+    },
+    User_id: {
+      type:DataTypes.INTEGER,
+      allowNull:false
+    },
+    Title: {
+      type:DataTypes.STRING,
+      allowNull:false
+    },
+    Content:{
+      type:DataTypes.STRING,
+      allowNull:false
+    },
+    Date: {
+      type:DataTypes.DATE,
+      allowNull:false
+    },
+    View_content: {
+      type:DataTypes.INTEGER,
+      allowNull:false
+    },
+    Image:{
+      type:DataTypes.STRING,
+      allowNull:false
+    },
+    Image_real: {
+      type:DataTypes.STRING,
+      allowNull:false
+    },
+    Video_link: {
+      type:DataTypes.STRING,
+      allowNull:false
+    }
+
   }, {
     sequelize,
     modelName: 'VideoTable',

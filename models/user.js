@@ -22,9 +22,14 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.STRING,
       allowNull:false
     },
-    UserPW: DataTypes.STRING,
-    StudentNumber: DataTypes.INTEGER,
-    Access: DataTypes.INTEGER
+    UserPW:{
+      type:DataTypes.STRING,
+      allowNull:false
+    },
+    StudentNumber: {
+      type:DataTypes.INTEGER,
+      allowNull:false
+    },
   }, {
     sequelize,
     modelName: 'User',
