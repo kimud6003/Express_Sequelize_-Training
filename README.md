@@ -34,4 +34,8 @@ DB 반영 완료
 
   >정렬
   >project.findAll({order: [['postWriter', 'DESC']]})
-  4.count,max,min,sum
+  
+  
+  4. count,max,min,sum
+  5. https://velog.io/@cadenzah/sequelize-document-1 공식 파트너
+  6. https://victorydntmd.tistory.com/92?category=677306 정성 블로그
