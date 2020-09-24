@@ -50,6 +50,6 @@ db.NoticeTable.belongsTo(db.NoticeTable_Category,{foreignKey:"User_id",targetKey
 
 db.VideoTable_Category.hasMany(db.VideoTable,{foreignKey:"User_id",sourceKey:"id"});
 db.VideoTable.belongsTo(db.VideoTable_Category,{foreignKey:"User_id",targetKey:"id"});
-
+// 외래키 끝
 
 module.exports = db;
