@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   NoticeTable.init({
-    Category_Id:{
+    Notice_Category_Id:{
       type:DataTypes.INTEGER,
       allowNull:false,
     },

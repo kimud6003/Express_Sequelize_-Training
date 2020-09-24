@@ -5,7 +5,7 @@ const { VideoTable } = require('../models');
 /* GET users listing. */
 router.post('/create',async (req,res,next)=>{
     VideoTable.create({
-        Category_id:req.body.Category_id,
+        // Category_id:req.body.Category_id,
         User_id:req.body.User_id,
         Title:req.body.Title,
         Content:req.body.Content,
@@ -23,12 +23,5 @@ router.post('/create',async (req,res,next)=>{
     })
 });
 
-router.post('/read',async (req,res,next)=>{
-    models.post.findAll().then( result => {
-        res.render("show", {
-          posts: result
-        });
-      });
-});
 
 module.exports = router;

@@ -23,6 +23,16 @@ module.exports = {
       StudentNumber: {
         type: Sequelize.INTEGER,
         allowNull: false,
+      },    
+      Access: {
+        type:DataTypes.INTEGER,
+        allowNull:false,
+        defaultValue:0
+      },
+      WR_Access: {
+        type:DataTypes.INTEGER,
+        allowNull:false,
+        defaultValue:0
       },
       createdAt: {
         allowNull: false,

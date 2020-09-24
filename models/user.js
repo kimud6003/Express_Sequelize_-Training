@@ -10,7 +10,6 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-
     }
   };
   User.init({
@@ -30,7 +29,12 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.INTEGER,
       allowNull:false
     },
-    Access: {
+    Access:{
+      type:DataTypes.INTEGER,
+      allowNull:false,
+      defaultValue:0
+    },
+    WR_Access: {
       type:DataTypes.INTEGER,
       allowNull:false,
       defaultValue:0

@@ -10,11 +10,10 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
     }
   };
   VideoTable.init({
-    Category_id: {
+    Video_Category_Id: {
       type:DataTypes.INTEGER,
       allowNull:false
     },
@@ -48,10 +47,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     Video_link: {
       type:DataTypes.STRING,
-      allowNull:false
-    },
-    Access: {
-      type:DataTypes.INTEGER,
       allowNull:false
     }
 

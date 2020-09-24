@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      Category_Id: {
+      Notice_Category_Id: {
         type: Sequelize.INTEGER,
         allowNull:false
       },
