@@ -8,10 +8,11 @@ router.post('/',async (req,res,next)=>{
       UserName:req.body.name,
       UserID:req.body.uid,
       UserPW:req.body.pw,
-      StudentNumber:req.body.stunum
+      StudentNumber:req.body.stunum,
+      Access:req.body.ac,
+      WR_Access:req.body.wrac,
     })
     .then(result => {
-      console.log("success");
       res.send("테스트 성공");
     })
     .catch(err => {

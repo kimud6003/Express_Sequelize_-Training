@@ -30,7 +30,6 @@ Object.keys(db).forEach(modelName => {
     db[modelName].associate(db);
   }
 });
-
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
@@ -49,8 +48,8 @@ db.NoticeTable.belongsTo(db.User,{foreignKey:"User_id",targetKey:"id"});
 db.NoticeTable_Category.hasMany(db.NoticeTable,{foreignKey:"Notice_Category_Id",sourceKey:"id"});
 db.NoticeTable.belongsTo(db.NoticeTable_Category,{foreignKey:"Notice_Category_Id",targetKey:"id"});
 
-db.VideoTable_Category.hasMany(db.VideoTable,{foreignKey:"Video_Category_Id",sourceKey:"id"});
-db.VideoTable.belongsTo(db.VideoTable_Category,{foreignKey:"Video_Category_Id",targetKey:"id"});
+// db.VideoTable_Category.hasMany(db.VideoTable,{foreignKey:"Video_Category_Id",sourceKey:"id"});
+// db.VideoTable.belongsTo(db.VideoTable_Category,{foreignKey:"Video_Category_Id",targetKey:"id"});
 
 // 외래키 끝
 

@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     Date: {
       type:DataTypes.DATE,
-      allowNull:false
+      // allowNull:false
     },
     View_content: {
       type:DataTypes.INTEGER,

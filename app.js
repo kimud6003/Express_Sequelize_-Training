@@ -10,14 +10,17 @@ var videoRouter = require('./routes/video');
 
 var app = express();
 
-const models = require("./models/index.js");
-
-models.sequelize.sync().then( () => {
-  console.log(" DB 연결 성공");
-}).catch(err => {
-  console.log("연결 실패");
-  console.log(err);
-})
+const models = require('./models');
+models.sequelize.sync()
+  .then(() => {
+    console.log('✓ DB 연결 ');
+    console.log('  CTRL-C 로 스탑\n');
+  })
+  .catch(err => {
+    console.error(err);
+    console.log('✗ DB 연결오류');
+    process.exit();
+  });
 
 
 // view engine setup
