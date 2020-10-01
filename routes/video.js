@@ -28,8 +28,8 @@ router.get('/:title', function(req, res, next) {
 router.post('/:id',async (req,res,next)=>{
     User.findAll({
         where:{
-            id:req.params.id
-        }
+            id:{[Op.eq]:req.params.id
+        }}
     }).then(result=>{
         if(result[0].WR_Access){
             VideoTable.create({
@@ -67,7 +67,7 @@ router.patch('/:id',async (req,res,next)=>{
 });
 
 router.delete('/:id',async (req,res,next)=>{
-    VideoTable.destroy({where:{id: req.params.id}})
+    VideoTable.destroy({where:{id:{[Op.eq] : req.params.id}}})
     .then((result)=> {
         if(result) res.send("삭제 성공");
         else res.send("삭제할게 있나용??");
