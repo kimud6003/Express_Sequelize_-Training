@@ -1,4 +1,5 @@
 var express = require('express');
+var cors = require('cors');
 var router = express.Router();
 const sequelize = require("sequelize");
 const { User,VideoTable} = require('../models');
